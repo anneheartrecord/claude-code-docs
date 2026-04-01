@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Claude Code 源码解剖</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="基于 Anthropic Claude Code 泄露源码的深度技术分析">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #7c3aed;
+    }
+    .sidebar-nav li a {
+      font-size: 14px;
+    }
+    .markdown-section {
+      max-width: 900px;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+    .app-name-link {
+      font-size: 20px !important;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      name: 'Claude Code 源码解剖',
+      repo: 'https://github.com/anneheartrecord/claude-code-docs',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      search: {
+        placeholder: '搜索文档...',
+        noData: '没有找到结果',
+        depth: 3,
+      },
+      auto2top: true,
+      coverpage: false,
+      relativePath: true,
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+</body>
+</html>
