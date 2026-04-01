@@ -60,9 +60,18 @@ Plan mode's approach is to have the model plan before executing:
 
 This mode is especially well-suited for complex multi-step tasks. Users can see the complete plan first and intervene on questionable steps, without needing to make decisions at every single step. It works with the `/plan` command, allowing users to proactively trigger planning mode.
 
-## 2️⃣ 42 Dangerous Patterns: The Hardcoded Safety Floor
+## 2️⃣ 42 Dangerous Patterns: The Default Safety Barrier
 
-Regardless of which permission mode is active, the code hardcodes **42 auto-reject bash patterns**. This is an unbypassable safety floor. Even if a user has configured allow rules, these patterns will still be intercepted.
+The code hardcodes **42 auto-reject bash patterns**. Under default permission configuration, these patterns are automatically intercepted.
+
+However, a common misconception needs to be clarified: **these rules are not absolutely unbypassable.** If a user explicitly configures an allow rule in `settings.json`, such as `Bash(python*)`, then python commands will be permitted. If `bypassPermissions` mode is used, all restrictions are skipped entirely.
+
+The 42 patterns actually take effect in these scenarios:
+- In **default mode**, when no allow rule matches, these commands trigger a confirmation prompt
+- In **auto mode**, the ML classifier will not auto-approve these patterns; they must go through user confirmation
+- When **entering auto mode**, Dangerous Rule Stripping automatically removes allow rules that involve these patterns, preventing the classifier from auto-approving based on old rules
+
+In other words, these 42 rules serve as a **hard safety floor in auto mode**, and in other modes they act as a checkpoint that requires explicit user confirmation to pass through.
 
 The 42 patterns fall into three categories:
 

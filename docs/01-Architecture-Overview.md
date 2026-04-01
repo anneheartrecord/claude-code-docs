@@ -91,7 +91,7 @@ A complete user request follows this path:
 ```
 User input
   ↓
-REPL capture → Determine if it's a slash command or natural language
+REPL capture → Determine input type: !command (direct shell exec) / /slash command / natural language (Agent loop)
   ↓
 QueryEngine.query() → Assemble system prompt + message history
   ↓
