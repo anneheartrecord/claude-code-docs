@@ -8,7 +8,7 @@ In 2025, Shopify CEO Tobi Lütke posted an opinion on social media: we should st
 
 To understand context engineering, you first need to understand a fundamental limitation of large language models: **the context window is finite.**
 
-The context window can be thought of as the model's **working memory**. When a human thinks about a complex problem, the amount of information the brain can actively hold in focus is limited. Large language models are the same. Claude's context window is approximately 200K tokens. That sounds large, but in a complex Agent task, this space gets consumed surprisingly fast.
+The context window can be thought of as the model's **working memory**. When a human thinks about a complex problem, the amount of information the brain can actively hold in focus is limited. Large language models are the same. Claude's context window ranges from 200K to 1M tokens depending on the model version, with Opus 4.6 already supporting 1M tokens. That sounds large, but in a complex Agent task, this space gets consumed surprisingly fast.
 
 Consider what Claude Code needs to fit into the context when handling a large code refactoring task: system instructions, the user's personalized configuration, project rules, the current Git repository status, the complete history of dozens of conversation turns, the results of every tool call, and definition documents for over 40 tools. All of this information competes for the same finite space.
 
