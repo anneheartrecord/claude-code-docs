@@ -103,7 +103,7 @@ This telemetry data is sent to Anthropic's backend. While model inference happen
 
 ## The Future Direction of Agents
 
-After thoroughly analyzing this source code, and combining it with my own experience building TME-Claw (an enterprise Agent platform based on OpenClaw), I have some predictions about where Agents are heading.
+After thoroughly analyzing this source code, and combining it with my own experience building an internal Agent platform based on OpenClaw, I have some predictions about where Agents are heading.
 
 **Claude Code is evolving toward a platform, and its evolutionary path overlaps heavily with the design philosophy of Agent platforms like OpenClaw.**
 
