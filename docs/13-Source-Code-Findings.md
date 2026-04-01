@@ -101,6 +101,26 @@ This telemetry data is sent to Anthropic's backend. While model inference happen
 - Don't share accounts
 - Keep your usage patterns similar to a normal user: work and rest, don't go 24/7 non-stop
 
+## The Future Direction of Agents
+
+After thoroughly analyzing this source code, and combining it with my own experience building TME-Claw (an enterprise Agent platform based on OpenClaw), I have some predictions about where Agents are heading.
+
+**Claude Code is evolving toward a platform, and its evolutionary path overlaps heavily with the design philosophy of Agent platforms like OpenClaw.**
+
+The most obvious signal: cross-session memory. The MEMORY.md mechanism in the source code has already implemented a basic version of cross-session memory persistence. The EXTRACT_MEMORIES and TEAMMEM feature flags indicate Anthropic is working on two things — automatic memory extraction and team memory sharing. This aligns perfectly with OpenClaw's design philosophy: an Agent shouldn't start as a blank slate every time it launches. It needs to remember who the user is, what they prefer, and where things left off last time. OpenClaw achieved instance-level state persistence through COS storage early on. Claude Code is now heading in the same direction, just via a different path — one uses the file system, the other uses object storage.
+
+The second signal is native channel integration. On March 20, 2025, Claude gained the ability to connect to Telegram through MCP plugins. This means the Agent is no longer confined to a terminal waiting for users to come to it — it can proactively exist within the communication tools users already use daily. OpenClaw was designed around channels from day one — WeChat, WeCom, Slack, Discord. Where the Agent lives depends on where the user is. Claude Code is now beginning to understand this. It's foreseeable that Claude Code will natively support more channels in the future, rather than just bridging through MCP. WhatsApp, Line, Lark — these are all just a matter of time.
+
+The third signal is the continuous lowering of the usage barrier. Looking at Claude Code's product iteration trajectory: from manually configuring API keys to one-click login, from pure CLI to VS Code integration, from manually writing CLAUDE.md to automatic memory extraction. Every step lowers the bar. The ultimate goal is clear: **let people who don't understand technology get things done with an Agent.** OpenClaw's Skills marketplace is the ultimate expression of this philosophy — users don't need to understand prompt engineering; they just pick a ready-made Skill and use it. Claude Code's Skills system is already doing the same thing.
+
+But lowering the barrier doesn't mean sacrificing the ceiling. This is the fourth prediction: **for advanced users, Agent platforms will provide increasingly more professional modes.**
+
+The 82 feature flags in Claude Code's source code are evidence. Default configuration is enough for ordinary users, but capable users can unlock entirely different experiences through flag combinations: custom compression strategies, permission mode adjustments, MCP toolchain configuration, Hooks for workflow automation. This layered design — simple to start, deep to master — is a common trait of all successful developer tools. Git is like this, Vim is like this, Kubernetes is like this too.
+
+OpenClaw's Planner-Executor architecture and Claude Code's ReAct loop are essentially solving the same problem: how to keep an Agent controllable during complex tasks. OpenClaw uses DAGs for task orchestration; Claude Code uses AsyncGenerator for tool loops. Different implementations, but the design philosophy is the same — **give the Agent autonomy, but always preserve human intervention points.**
+
+My prediction is: within the next 12 months, Claude Code and platforms like OpenClaw will rapidly converge in functionality. Claude Code will become more platform-like (multi-channel, persistent memory, team collaboration), and OpenClaw will become more intelligent (stronger models, better reasoning capabilities). The ultimate competition won't be about who has the stronger model or more features, but about who can find the best balance between **lowering the usage barrier** and **raising the capability ceiling**.
+
 ## Final Thoughts
 
 These findings gave me a more concrete understanding of AI Coding.
