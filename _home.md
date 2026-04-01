@@ -6,6 +6,7 @@
 ![Language](https://img.shields.io/badge/language-中文%20%7C%20English-orange)
 ![Lines](https://img.shields.io/badge/analyzed-515K%20lines-red)
 ![AI](https://img.shields.io/badge/AI%20Powered-Claude%20Code-purple)
+[![GitHub stars](https://img.shields.io/github/stars/anneheartrecord/claude-code-docs?style=social)](https://github.com/anneheartrecord/claude-code-docs)
 
 > 📖 **在线阅读：** https://anneheartrecord.github.io/claude-code-docs/
 
