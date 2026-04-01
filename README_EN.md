@@ -93,7 +93,6 @@ bun run dev --version
 | Permission Rules | 42 hardcoded dangerous patterns |
 | Compaction Threshold | Context window - 13,000 tokens |
 | Dependencies | 583 packages |
-| AI-Generated | Yes, 95%+ confidence |
 
 ## License
 

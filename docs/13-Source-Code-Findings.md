@@ -6,13 +6,13 @@
 
 The previous 12 articles were all serious teardowns of architecture and modules. This one is a bit different — it's about the things hidden in the corners of the code that truly shocked me or made me laugh. It also discusses Claude's ban mechanism based on what the source code reveals.
 
-## 1️⃣ The Entire Project Was Indeed Written by AI
+## 1️⃣ About the Source of This Code
 
-All 20 git commits came from a single user: **claude-code-best**. Three commits explicitly carry `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>`.
+An important clarification first. The GitHub repository you see is not Anthropic's original repository. It's a fork created by a developer who reconstructed the code from sourcemaps.
 
-515,000 lines of code, zero compilation errors on first build. No WIP, temp, oops, or fix typo commits whatsoever. Every commit message reads like a task report: cleaned up 176 `any` annotations, fixed 33 tsc compilation errors, fixed 41 regressions introduced during cleanup.
+The reconstructed code lacked the build scaffolding and couldn't run directly. The developer did extensive repair work to get it to compile: filling in missing type definitions, fixing compilation errors, cleaning up `any` annotations, and more. The commits with `Co-Authored-By: Claude Opus 4.6` indicate that Claude was used to assist with the repair process.
 
-**This is probably the largest publicly visible engineering project completed independently by AI.** It proves one thing: AI's ability to write large-scale code has reached an astonishing level. But it also exposes shortcomings in AI's engineering discipline — more on that later.
+**These commit records reflect the repair work, not Anthropic's original development history.** We cannot determine Anthropic's internal development process, commit conventions, or whether they used AI-assisted coding from this repository alone.
 
 ## 2️⃣ The Source Leak Itself Is Evidence of AI's Engineering Shortcomings
 
