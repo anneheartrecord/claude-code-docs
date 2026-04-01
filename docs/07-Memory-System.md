@@ -1,4 +1,4 @@
-[中文](07-记忆管理.md)
+[中文](docs/07-记忆管理.md)
 
 # 07 Memory System
 
@@ -169,4 +169,4 @@ Claude Code clearly leads the industry in memory system design. The five-layer l
 
 ---
 
-Next: [08-Tools-and-Skills](08-Tools-and-Skills.md)
+Next: [08-Tools-and-Skills](docs/08-Tools-and-Skills.md)

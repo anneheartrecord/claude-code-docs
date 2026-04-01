@@ -1,4 +1,4 @@
-[中文](06-权限系统.md)
+[中文](docs/06-权限系统.md)
 
 # 06 Permission System
 
@@ -175,4 +175,4 @@ Claude Code's permission system surpasses competitors in both depth and breadth.
 
 ---
 
-Next: [07-Memory-System](07-Memory-System.md)
+Next: [07-Memory-System](docs/07-Memory-System.md)

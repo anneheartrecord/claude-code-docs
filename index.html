@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="基于 Anthropic Claude Code 泄露源码的深度技术分析">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/anthropics/anthropic-cookbook@main/assets/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     :root {
@@ -37,7 +36,7 @@
   <div id="app">Loading...</div>
   <script>
     window.$docsify = {
-      name: '<img src="https://claude.ai/favicon.ico" width="24" height="24" alt="Claude"> Claude Code 源码解析',
+      name: '<img src="favicon.ico" width="24" height="24" alt="Claude"> Claude Code 源码解析',
       nameLink: '/',
       repo: 'https://github.com/anneheartrecord/claude-code-docs',
       loadSidebar: true,
@@ -49,7 +48,8 @@
       },
       auto2top: true,
       coverpage: false,
-      relativePath: true,
+      relativePath: false,
+      homepage: '_home.md',
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>

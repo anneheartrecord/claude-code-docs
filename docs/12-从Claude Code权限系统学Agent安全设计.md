@@ -1,4 +1,4 @@
-[English](12-Agent-Security-Design.md)
+[English](docs/12-Agent-Security-Design.md)
 
 # 12 从 Claude Code 权限系统学 Agent 安全设计
 
@@ -142,4 +142,4 @@ Claude Code 做到了 L4。大部分开源 Agent 还在 L0。
 
 ## 下一篇
 
-[13-啃完51万行源码的发现与 Claude 的封号机制](13-啃完源码之后的一些发现.md)
+[13-啃完51万行源码的发现与 Claude 的封号机制](docs/13-啃完源码之后的一些发现.md)
