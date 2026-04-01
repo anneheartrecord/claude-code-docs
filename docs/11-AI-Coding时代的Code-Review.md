@@ -1,4 +1,4 @@
-[English](./11-AI-Code-Review.md)
+[English](/docs/11-AI-Code-Review.md)
 
 # 11 AI Coding 时代的 Code Review
 

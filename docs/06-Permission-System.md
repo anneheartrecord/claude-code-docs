@@ -1,4 +1,4 @@
-[中文](./06-权限系统.md)
+[中文](/docs/06-权限系统.md)
 
 # 06 Permission System
 

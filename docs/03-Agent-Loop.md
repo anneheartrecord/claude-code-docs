@@ -1,4 +1,4 @@
-[中文](./03-Agent循环.md)
+[中文](/docs/03-Agent循环.md)
 
 # 03 The Agent Loop
 
@@ -78,7 +78,7 @@ Another key design is **session-level caching**. This information rarely changes
 
 This stage assembles the complete request to send to the API. It is the **most information-dense** part of the entire loop. The request contains four core components:
 
-**system prompt** provides the model with foundational instructions. It is dynamically assembled from multiple sources: built-in Agent behavior rules, user memory from CLAUDE.md, current Git repository status, and permission mode descriptions. This component's design is extremely refined. See [04-Context Engineering](./04-Context-Engineering.md) for details.
+**system prompt** provides the model with foundational instructions. It is dynamically assembled from multiple sources: built-in Agent behavior rules, user memory from CLAUDE.md, current Git repository status, and permission mode descriptions. This component's design is extremely refined. See [04-Context Engineering](/docs/04-Context-Engineering.md) for details.
 
 **messages** is the complete conversation history. This includes messages sent by the user, the model's previous replies, and results from all prior tool calls. This is the model's **primary source of information** for understanding the current task's progress.
 
@@ -118,7 +118,7 @@ tool_result appended to message history
 
 **Parallel execution** is an important performance optimization. If the model requests reading three files simultaneously, all three read operations proceed in parallel rather than queuing up one after another. For complex tasks, this can significantly reduce total wait time.
 
-**Permission checking** is the core safety mechanism. Based on the current permission mode and the specific tool type, the system decides whether to execute directly, auto-approve, or show a confirmation dialog. See [06-Permission System](./06-Permission-System.md) for details.
+**Permission checking** is the core safety mechanism. Based on the current permission mode and the specific tool type, the system decides whether to execute directly, auto-approve, or show a confirmation dialog. See [06-Permission System](/docs/06-Permission-System.md) for details.
 
 **Pre-Hook and Post-Hook** are interception points before and after tool execution. Pre-hooks can validate parameters and log operations; post-hooks can sanitize tool output and write audit logs. This **aspect-oriented** design separates the core tool execution logic from peripheral concerns, making the code easier to maintain.
 
@@ -128,7 +128,7 @@ After each tool execution completes, the system checks whether the current **tok
 
 This stage addresses a practical problem: when an Agent handles complex tasks, it may loop dozens of times, appending new content to the message history each iteration. Without any cleanup, the message history continuously grows until it exceeds the model's context window limit, causing the Agent to crash.
 
-Claude Code designed a three-tier progressive compaction strategy: **micro-compaction** clears detailed output from earlier tool calls, **Session Memory** persists key information to durable storage, and **Full Compact** compresses the entire conversation history into a summary. See [05-Compaction System](./05-Compaction-System.md) for specifics.
+Claude Code designed a three-tier progressive compaction strategy: **micro-compaction** clears detailed output from earlier tool calls, **Session Memory** persists key information to durable storage, and **Full Compact** compresses the entire conversation history into a summary. See [05-Compaction System](/docs/05-Compaction-System.md) for specifics.
 
 ### Stage 6: Continue Decision
 
@@ -213,4 +213,4 @@ This loop's design reveals a core reality of current Agent engineering: **model 
 
 ---
 
-> Next: [04-Context Engineering](./04-Context-Engineering.md)
+> Next: [04-Context Engineering](/docs/04-Context-Engineering.md)

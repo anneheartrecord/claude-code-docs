@@ -1,4 +1,4 @@
-[中文](./10-未来功能蓝图.md)
+[中文](/docs/10-未来功能蓝图.md)
 
 # 10 Future Features Roadmap
 
@@ -198,4 +198,4 @@ The code is scattered with production lesson annotations prefixed by **BQ**. The
 
 For engineers building AI Agent systems, **these production lessons are more practically valuable than any design patterns textbook.**
 
-Next: [11-AI Code Review](./11-AI-Coding时代的Code-Review.md)
+Next: [11-AI Code Review](/docs/11-AI-Coding时代的Code-Review.md)

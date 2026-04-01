@@ -1,4 +1,4 @@
-[English](./09-MCP-Integration.md)
+[English](/docs/09-MCP-Integration.md)
 
 # 09 MCP 集成
 
@@ -126,4 +126,4 @@ MCP 的行业影响正在扩大。除了 Claude Code，VS Code 的 GitHub Copilo
 
 对于开发者来说，现在投入精力学习和使用 MCP 是值得的。**它代表了 AI 工具生态的发展方向：标准化、可组合、安全可控。**
 
-下一篇：[10-未来功能蓝图](./10-未来功能蓝图.md)
+下一篇：[10-未来功能蓝图](/docs/10-未来功能蓝图.md)

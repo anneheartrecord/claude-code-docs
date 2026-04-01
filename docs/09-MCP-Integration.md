@@ -1,4 +1,4 @@
-[中文](./09-MCP集成.md)
+[中文](/docs/09-MCP集成.md)
 
 # 09 MCP Integration
 
@@ -126,4 +126,4 @@ But MCP also faces challenges. The protocol itself is still evolving rapidly, an
 
 For developers, investing time in learning and using MCP now is worthwhile. **It represents the direction of AI tool ecosystems: standardized, composable, and securely controllable.**
 
-Next: [10-Future Features](./10-未来功能蓝图.md)
+Next: [10-Future Features](/docs/10-未来功能蓝图.md)

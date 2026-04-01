@@ -1,4 +1,4 @@
-[中文](./02-源码泄露的价值之争.md)
+[中文](/docs/02-源码泄露的价值之争.md)
 
 # 02 The Value Debate: What Is Leaked Source Code Really Worth?
 
@@ -74,7 +74,7 @@ Several are particularly noteworthy:
 
 These feature flags paint a clear picture: Anthropic is evolving Claude Code from a programming assistant into a **general-purpose autonomous Agent platform**.
 
-**The future technical roadmap of one of the world's top AI Agent companies may be more valuable than the existing architecture itself.** See [10-Future Features](./10-Future-Features.md) for details.
+**The future technical roadmap of one of the world's top AI Agent companies may be more valuable than the existing architecture itself.** See [10-Future Features](/docs/10-Future-Features.md) for details.
 
 ## 6️⃣ Summary
 
@@ -90,4 +90,4 @@ But ultimately, **what is truly valuable is the Harness Engineering capability t
 
 ---
 
-> Next: [03-Agent Loop](./03-Agent-Loop.md)
+> Next: [03-Agent Loop](/docs/03-Agent-Loop.md)
