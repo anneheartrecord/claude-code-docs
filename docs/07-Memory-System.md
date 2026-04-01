@@ -54,7 +54,7 @@ Priority from low to high:
    → Design goal: let team members' Agents automatically share valuable discoveries
 ```
 
-Higher-priority content overrides lower-priority content with the same name. Within the same tier, multiple files under the rules directory are merged in alphabetical order.
+Higher-priority content overrides **conflicting** lower-priority content, while non-conflicting content from all levels is preserved. In practice, content from all tiers is concatenated together and injected into the system prompt, loaded in order from lowest to highest priority. When instructions from two tiers contradict each other, the higher-priority instruction appearing later wins, because LLMs have stronger attention weight on instructions positioned later in the context. Non-conflicting instructions from any tier all remain effective simultaneously. Within the same tier, multiple files under the rules directory are merged in alphabetical order.
 
 The inspiration for this five-layer design is clear: **it is isomorphic to configuration management hierarchies in software engineering**. Consider CSS cascading rules, Kubernetes ConfigMap override chains, or Git's configuration levels. They all follow the same pattern: more specific configuration overrides more general configuration, local overrides global. Claude Code applies this well-proven pattern to Agent instruction memory management.
 
