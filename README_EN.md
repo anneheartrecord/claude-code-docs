@@ -8,6 +8,8 @@
 ![Lines](https://img.shields.io/badge/analyzed-515K%20lines-red)
 ![AI](https://img.shields.io/badge/AI%20Powered-Claude%20Code-purple)
 
+> 📖 **Read Online:** https://anneheartrecord.github.io/claude-code-docs/
+
 ## What Happened
 
 In March 2026, someone discovered that Anthropic's Claude Code client package published on npm included sourcemap files.

@@ -8,6 +8,8 @@
 ![Lines](https://img.shields.io/badge/analyzed-515K%20lines-red)
 ![AI](https://img.shields.io/badge/AI%20Powered-Claude%20Code-purple)
 
+> 📖 **在线阅读：** https://anneheartrecord.github.io/claude-code-docs/
+
 2026 年 3 月 31日，有人发现 Anthropic 发布在 npm 上的 Claude Code 客户端包里带了 sourcemap 文件。
 
 Sourcemap 是前端构建工具生成的调试辅助文件，记录了编译后代码和原始源码之间的映射关系。正常发布时应该把它排除掉，但 Anthropic 的构建流程里漏了这一步。
