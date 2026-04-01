@@ -1,4 +1,4 @@
-[中文](/docs/04-上下文工程.md)
+[中文](04-上下文工程.md)
 
 # 04 Context Engineering
 
@@ -163,4 +163,4 @@ Claude Code's intensity of investment in this area, in terms of both code volume
 
 ---
 
-> Next: [05-Compaction System](/docs/05-Compaction-System.md)
+> Next: [05-Compaction System](05-Compaction-System.md)

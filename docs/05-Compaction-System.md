@@ -1,4 +1,4 @@
-[中文](/docs/05-消息压缩系统.md)
+[中文](05-消息压缩系统.md)
 
 # 05 Compaction System
 
@@ -217,4 +217,4 @@ Claude Code's approach ranks highest in both information retention and engineeri
 
 ---
 
-Next: [06-Permission-System](/docs/06-Permission-System.md)
+Next: [06-Permission-System](06-Permission-System.md)

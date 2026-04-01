@@ -1,4 +1,4 @@
-[中文](/docs/01-架构总览.md)
+[中文](01-架构总览.md)
 
 # 01 Architecture Overview
 
@@ -118,4 +118,4 @@ Output final result
 
 ## Was It Written by AI?
 
-Yes. All 20 commits come from claude-code-best, with three commits bearing `Co-Authored-By: Claude Opus 4.6`. 515,000 lines of code compiled with zero errors on the first try. See [02-Value-Debate](/docs/02-Value-Debate.md) for details.
+Yes. All 20 commits come from claude-code-best, with three commits bearing `Co-Authored-By: Claude Opus 4.6`. 515,000 lines of code compiled with zero errors on the first try. See [02-Value-Debate](02-Value-Debate.md) for details.

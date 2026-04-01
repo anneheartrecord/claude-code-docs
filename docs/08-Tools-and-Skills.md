@@ -1,4 +1,4 @@
-[中文](/docs/08-工具与Skill系统.md)
+[中文](08-工具与Skill系统.md)
 
 # 08 Tools and Skills
 
@@ -221,4 +221,4 @@ All these design choices point in the same direction: **making the Agent more re
 
 Claude Code clearly leads in tool system completeness. However, more tools also mean a higher probability of the model picking the wrong one. Anthropic mitigates this through carefully crafted tool descriptions and usage guidelines in the system prompt, but this remains an area of ongoing optimization.
 
-Next: [09-MCP Integration](/docs/09-MCP集成.md)
+Next: [09-MCP Integration](09-MCP集成.md)

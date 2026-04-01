@@ -1,4 +1,4 @@
-[中文](/docs/13-啃完源码之后的一些发现.md)
+[中文](13-啃完源码之后的一些发现.md)
 
 # 13 Findings from Devouring 510K Lines of Source Code, and Claude's Ban Mechanism
 
