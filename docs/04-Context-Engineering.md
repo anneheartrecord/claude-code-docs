@@ -117,15 +117,19 @@ Another core principle of context engineering is **do not dump all information i
 
 This principle runs counter to many people's intuition. People often assume more information is always better for the model. But both research and practice show that excessive context information **dilutes the model's attention**, degrading its processing capability on critical information. Academics call this phenomenon **Lost in the Middle**, meaning that when context is very long, the model's attention to information in the middle portion drops significantly.
 
-Claude Code's solution is to **dynamically inject different context based on the Agent's current stage**:
+Claude Code's solution is to **reassemble context every loop iteration, deciding what to inject based on the current state**.
 
-**During the Planning stage**, a global view is needed. The system injects the complete Skill list and project structure information so the model can formulate a comprehensive execution plan.
+Specifically, context assembly isn't a one-time process that stays fixed. During the "build context" phase of each Agent loop iteration, the system re-evaluates the current state and decides what information to bring in:
 
-**During the Execution stage**, focus on the current task is needed. The system injects only file contents directly relevant to the task being processed, avoiding wasting precious context space on irrelevant information.
+**Early in a conversation**, the model hasn't started calling tools yet. Global information in the system prompt — Skill lists, project structure, CLAUDE.md rules — makes up a high proportion, giving the model a global view to plan what to do next.
 
-**During the Post-compaction Recovery stage**, rapid context reconstruction is needed. The system injects previously generated summaries along with paths to complete transcript files. If the model needs a specific detail that was compacted away, it can proactively call the file read tool to fetch it on demand, rather than having all details crammed in from the start.
+**After multiple execution rounds**, the message history has accumulated substantial tool call results (file contents, command outputs, etc.). This concrete execution context naturally becomes the focus of the model's attention. While the global information in the system prompt is still present, the model's attention has shifted to the content in message history that's directly relevant to the current task.
 
-The elegance of this design lies in how it **transforms context management into a continuous decision-making process**. At each loop iteration, the system re-evaluates based on the current state: what information is most important right now? What can be set aside for the moment? What should be removed entirely?
+**After compaction is triggered**, old message history is replaced with summaries, and transcript file paths are injected. In the first loop iteration after compaction, the model can quickly reconstruct its understanding of previous work through the summary. If it needs a specific detail that was compacted away, it can proactively call the file read tool to fetch it from the transcript on demand.
+
+An important clarification: there is no explicit "phase switching" logic here. The source code contains no `if (phase === 'planning')` branch. What actually happens is: the system prompt is rebuilt every iteration, the compaction system intervenes to clean up when necessary, and the model itself decides when to plan and when to execute. The system's job is to **continuously prepare the most relevant context for the model**, not to hardcode different injection strategies for different phases.
+
+The value of this design is that it **transforms context management into a continuous process**. At each loop iteration, the system re-evaluates based on the current state: what information is most important right now? What can be set aside for the moment? What should be removed entirely?
 
 ## 6️⃣ Prompt Cache Optimization: Saving Real Money
 
