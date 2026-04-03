@@ -4,6 +4,9 @@
 
 ## 1️⃣ 从一次 Sourcemap 泄露说起
 
+![Sourcemap泄露教训](../imgs/11-review-sourcemap-lesson.png)
+
+
 2025 年，Claude Code 的完整源码被公开还原。原因令人哭笑不得：**构建流程中没有排除 sourcemap 文件**。Sourcemap 是 JavaScript 构建工具生成的调试辅助文件，记录了编译后代码与原始源码的映射关系。只要拿到 .map 文件，就能几乎完美地还原出原始代码。
 
 这个项目有 51.5 万行代码，TypeScript 类型定义零错误，每个异步函数都有完善的错误处理，代码结构清晰整齐。从代码质量的角度看，它几乎无可挑剔。但就是在"构建产物应该包含哪些文件"这个最基础的发布安全问题上，出了致命的遗漏。
@@ -13,6 +16,9 @@
 **这正是 Code Review 在 AI 时代需要重新定义的原因。**
 
 ## 2️⃣ 个人层面：Review 重心的转移
+
+![Review重心转移](../imgs/11-review-focus-shift.png)
+
 
 ### 过去的做法
 
@@ -63,6 +69,9 @@ AI 依然有盲区的领域，也是人类 Review 应该聚焦的地方：
 **没有共享 prompt 的团队，每个人的 AI 写出来的代码风格、架构风格、测试风格都不一样。** 代码库最终会变成一锅大杂烩。有了共享 prompt，至少保证了一个一致的基准线。
 
 ## 4️⃣ CICD 基础设施层面：AI 时代的新范式
+
+![AI时代CICD新检查项](../imgs/11-review-cicd-new.png)
+
 
 这是最需要被重新定义的一层，也是最有价值的一层。
 
@@ -125,6 +134,9 @@ Review Agent 的检查清单：
 
 ## 5️⃣ 一套可落地的 AI 代码 Review 流程
 
+![五阶段Review流程](../imgs/11-review-five-stages.png)
+
+
 把上述所有层面整合起来，形成一套完整的流程：
 
 ```
@@ -154,6 +166,9 @@ Review Agent 的检查清单：
 这套流程的核心思想是**分层过滤**。自动化检查过滤掉最基础的问题，Review Agent 过滤掉 AI 特有的问题，人工 Review 只需要关注最高层级的判断。每一层都做自己最擅长的事情。
 
 ## 6️⃣ 从 Claude Code 源码学到的 Review 教训
+
+![AI代码特征与Review重点](../imgs/11-review-ai-traits.png)
+
 
 Claude Code 51.5 万行源码是一个绝佳的 AI 代码 Review 案例。通过分析它的代码特征，可以提炼出一套针对 AI 代码的 Review 指南：
 
